@@ -127,8 +127,8 @@ function App() {
               <div className="card" onClick={(e) => setCityName("andijan")}>
                 Andijan
               </div>
-              <div className="card" onClick={(e) => setCityName("Karshi")}>
-                Kashkadarya
+              <div className="card" onClick={(e) => setCityName("kitob")}>
+                Kitob
               </div>
               <div className="card" onClick={(e) => setCityName("termez")}>
                 Termez
