@@ -62,6 +62,9 @@ function App() {
   } else if (data.weather ? data.weather[0].main === "Thunderstorm" : false) {
     document.getElementById("App").style.backgroundImage =
       "url('../images/Thunderstorm.webp')";
+  } else if (data.weather ? data.weather[0].main === "Mist" : false) {
+    document.getElementById("App").style.backgroundImage =
+      "url('../images/mist.jpg')";
   }
 
   return (
