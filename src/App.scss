@@ -1,0 +1,184 @@
+#App{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  .container{
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    min-height: 100vh;
+    text-align: center;
+    
+    .header{
+      text-align: center;
+      padding: 25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input{
+        height: 32px;
+        padding: 10px;
+        border: none;
+        border-bottom: 1.5px solid white;
+        background: none;
+        outline: none;
+        &::placeholder{
+          color: white;
+        }
+      
+      }
+      .searchBtn{
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        padding: 5px;
+        background: none;
+        height: 32px;
+        cursor: pointer;
+        
+      }
+    }
+    .sidebar{
+      // margin-top: 50px;
+      display: flex;
+      height: 100%;
+      .main{
+        margin-bottom: 50px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 110px;
+        .city-name{
+          font-size: 30px;
+          span{
+            font-size: 20px;
+          }
+        }
+        h1{
+          font-size: 90px;
+        }
+        .weather-info{          
+          display: flex;
+          justify-content: center;
+          gap: 60px;
+          p{
+            font-size: 24px;
+          }
+        }
+      }
+      .cards{
+        align-items: center;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        .card{
+          text-align: center;
+          cursor: pointer;
+          background-color: rgba($color: white, $alpha: 0.4);
+          line-height: 30px;
+          width: 80%;
+          height: 30px;
+          border-radius: 5px;
+          transform: scale(1);
+          transition: all 0.4s ease;
+          &:hover{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  .registration{
+    background-image: url('../public/images/default.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    form{
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(5px);
+      height: 250px;
+      width: 500px;
+      text-align: center;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 25px;
+      input{
+        background-color: rgba($color: #000000, $alpha: 0);
+        border: none;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        outline: none;
+        width: 80%;
+        display: inline-block;
+        &::placeholder{
+          color: white;
+        }
+      }
+      button{
+        cursor: pointer;
+        width: 80%;
+        height: 30px;
+        background-color: rgba($color: #000000, $alpha: 0);
+        border: none;
+        transition: all 0.3s ease;
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background-color: white;
+          transform: scale(0);
+          transition: all 0.4s ease;
+        }
+        &:hover::before{
+          transform: scale(1);
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #App{
+    .container{
+      .sidebar{
+        display: block;
+        .main{
+          width: 100%;
+          gap: 80px;
+          .city-name{
+            font-size: 20px;
+          }
+          h1{
+            font-size: 60px;
+          }
+          .weather-info{
+            gap: 30px;
+            p{
+              font-size: 20px;
+            }
+          }
+        }
+        .cards{
+          width: 100%;
+          .card{
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
